@@ -21,7 +21,14 @@ nav{display:flex;gap:14px;align-items:center;padding:14px 0}
 .icon{width:18px;height:18px;display:inline-block}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center;padding:34px 0}
 .title{font-size:40px;line-height:1.06;margin:6px 0 8px}
-.lead{color:var(--muted);max-width:60ch}
+.slogan{
+  font-size:22px;
+  font-weight:600;
+  margin-top:14px;
+  color:var(--accent2);
+  letter-spacing:0.5px;
+}
+.lead{color:var(--muted);max-width:60ch;margin-top:8px}
 .badge{display:inline-flex;gap:8px;align-items:center;border:1px solid #22355c;background:#0f1a30;color:#bcd0f7;padding:6px 10px;border-radius:999px;font-size:12px}
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px}
 .heroCard{aspect-ratio:4/3;display:grid;place-items:center;border-radius:14px;background:radial-gradient(160px 100px at 20% 20%, rgba(122,162,255,.18), transparent 60%), radial-gradient(220px 160px at 80% 70%, rgba(255,209,102,.18), transparent 60%), #0c1324}
@@ -38,7 +45,7 @@ nav{display:flex;gap:14px;align-items:center;padding:14px 0}
 .item a{color:var(--ink);text-decoration:none}
 .item .meta{color:var(--muted);font-size:13px;margin-top:4px}
 footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 40px}
-@media (max-width:900px){.hero{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.title{font-size:30px}}
+@media (max-width:900px){.hero{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.title{font-size:30px}.slogan{font-size:18px}}
 </style>
 </head>
 <body>
@@ -68,11 +75,8 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 40px}
 <div class="container">
   <section class="hero">
     <div>
-      <span class="badge">
-        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h10M4 17h7" stroke="#bcd0f7"/></svg>
-        Simple Guides · No Fluff
-      </span>
       <h1 class="title">BuildYourSide</h1>
+      <div class="slogan">Simple Guides · No Fluff</div>
       <p class="lead">Straight-to-the-point guides for earning online and offline. Start small, stay safe, and grow your side income step by step.</p>
     </div>
     <div class="panel heroCard">
