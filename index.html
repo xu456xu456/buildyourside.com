@@ -1,185 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BuildYourSide — Smart Earning Guides</title>
-  <meta name="description" content="Practical guides for earning online and offline — no fluff, no scams, just step-by-step ideas.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0b0e16;
-      --panel:#101626;
-      --ink:#e8ecf7;
-      --muted:#9aa7c4;
-      --line:#1b2437;
-      --accent1:#6ea8ff;
-      --accent2:#ffd166;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      background:
-        radial-gradient(800px 400px at 15% -10%, rgba(70,90,150,.25), transparent 70%),
-        radial-gradient(800px 400px at 100% 20%, rgba(200,170,60,.15), transparent 70%),
-        var(--bg);
-      color:var(--ink);
-      min-height:100vh;
-      -webkit-font-smoothing:antialiased;
-    }
-    header{
-      padding:24px 0;
-      text-align:center;
-    }
-    h1{
-      font-size:2.2em;
-      font-weight:800;
-      background:linear-gradient(135deg,var(--accent1),var(--accent2));
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      letter-spacing:-.5px;
-    }
-    p.lead{
-      color:var(--muted);
-      margin-top:6px;
-    }
-    nav{
-      margin-top:20px;
-      display:flex;
-      justify-content:center;
-      gap:14px;
-      flex-wrap:wrap;
-    }
-    nav a{
-      color:var(--ink);
-      text-decoration:none;
-      padding:8px 16px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background:var(--panel);
-      transition:.2s;
-      font-weight:600;
-    }
-    nav a:hover{
-      background:linear-gradient(135deg,rgba(110,168,255,.25),rgba(255,209,102,.15));
-      border-color:rgba(255,255,255,.2);
-    }
-
-    main{
-      max-width:960px;
-      margin:50px auto;
-      padding:0 22px;
-    }
-    h2{
-      font-size:1.5em;
-      margin-bottom:12px;
-      color:var(--accent1);
-    }
-    .grid{
-      display:grid;
-      gap:16px;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    }
-    .card{
-      background:var(--panel);
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:18px;
-      position:relative;
-      overflow:hidden;
-    }
-    .card::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      border-radius:16px;
-      padding:1px;
-      background:linear-gradient(135deg,rgba(110,168,255,.3),rgba(255,209,102,.2));
-      -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-      -webkit-mask-composite:xor;
-      mask-composite:exclude;
-      opacity:.3;
-    }
-    .card h3{margin-bottom:6px;}
-    .card p{color:var(--muted);}
-    .card a{
-      display:inline-block;
-      margin-top:8px;
-      color:var(--accent1);
-      font-weight:600;
-      text-decoration:none;
-    }
-    .card a:hover{text-decoration:underline;}
-    footer{
-      text-align:center;
-      color:var(--muted);
-      font-size:.9em;
-      border-top:1px solid var(--line);
-      padding:30px 0;
-    }
-    .glow{
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      z-index:-1;
-      background:
-        linear-gradient(transparent 0 49%, rgba(110,168,255,.08) 50% 51%, transparent 52% 100%),
-        linear-gradient(90deg, transparent 0 49%, rgba(255,209,102,.05) 50% 51%, transparent 52% 100%);
-      background-size:60px 60px;
-      mask:radial-gradient(800px 400px at 50% -10%, #000 0 70%, transparent 80% 100%);
-      animation: drift 28s linear infinite;
-    }
-    @keyframes drift{to{transform:translateY(60px)}}
-  </style>
+<meta charset="utf-8">
+<title>BuildYourSide — Simple Guides to Earn Smarter</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Straight-to-the-point guides for online and offline side hustles.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Ctext y='52' x='8' font-size='52'%3E💼%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0b1018; --panel:#0f1624; --ink:#ecf2ff; --muted:#9fb1d1; --line:#1d2a44;
+  --accent:#7aa2ff; --accent2:#ffd166; --link:#9dc1ff;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial;background:radial-gradient(800px 400px at 20% -10%,#101b33 10%,transparent 60%),var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.topbar{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);background:linear-gradient(180deg,#0b1018cc,transparent);border-bottom:1px solid var(--line);z-index:10}
+nav{display:flex;gap:14px;align-items:center;padding:14px 0}
+.navlink{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:12px;border:1px solid var(--line);text-decoration:none;color:var(--ink);background:#0d1422}
+.navlink:hover{border-color:#2a3f6a}
+.icon{width:18px;height:18px;display:inline-block}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center;padding:34px 0}
+.title{font-size:40px;line-height:1.06;margin:6px 0 8px}
+.lead{color:var(--muted);max-width:60ch}
+.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid #22355c;background:#0f1a30;color:#bcd0f7;padding:6px 10px;border-radius:999px;font-size:12px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px}
+.heroCard{aspect-ratio:4/3;display:grid;place-items:center;border-radius:14px;background:radial-gradient(160px 100px at 20% 20%, rgba(122,162,255,.18), transparent 60%), radial-gradient(220px 160px at 80% 70%, rgba(255,209,102,.18), transparent 60%), #0c1324}
+.heroCard h3{margin:0;font-size:26px;background:linear-gradient(135deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.section{padding:18px 0 34px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{background:#0b1322;border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;gap:12px}
+.card h3{margin:4px 0 6px}
+.card p{margin:0;color:var(--muted)}
+.card a{margin-top:10px;display:inline-block;color:var(--link);text-decoration:none}
+.card a:hover{text-decoration:underline}
+.list{display:grid;gap:12px}
+.item{border:1px solid var(--line);border-radius:12px;padding:12px}
+.item a{color:var(--ink);text-decoration:none}
+.item .meta{color:var(--muted);font-size:13px;margin-top:4px}
+footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 40px}
+@media (max-width:900px){.hero{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.title{font-size:30px}}
+</style>
 </head>
 <body>
-<div class="glow"></div>
+<div class="topbar">
+  <div class="container">
+    <nav>
+      <a class="navlink" href="/">
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M3 10.5 12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-10.5Z" stroke="#9dc1ff"/></svg>
+        Home
+      </a>
+      <a class="navlink" href="/guides/">
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 5h10a3 3 0 0 1 3 3v11H7a3 3 0 0 0-3 3V5Z" stroke="#ffd166"/><path d="M7 5h10a3 3 0 0 1 3 3v11" stroke="#ffd166"/></svg>
+        Guides
+      </a>
+      <a class="navlink" href="/about.html">
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#9dc1ff"/><path d="M12 8v.01M12 11v5" stroke="#9dc1ff" stroke-linecap="round"/></svg>
+        About
+      </a>
+      <a class="navlink" href="/contact.html">
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M3 5h18v14H3z" stroke="#ffd166"/><path d="M3 7l9 6 9-6" stroke="#ffd166"/></svg>
+        Contact
+      </a>
+    </nav>
+  </div>
+</div>
 
-<header>
-  <h1>BuildYourSide</h1>
-  <p class="lead">Smart Earning Guides · Online & Offline · No Fluff</p>
-  <nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="guides/">📘 Guides</a>
-    <a href="about.html">💡 About</a>
-    <a href="contact.html">✉️ Contact</a>
-  </nav>
-</header>
-
-<main>
-  <section>
-    <h2>Featured Paths</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Online — Octopus Surveys</h3>
-        <p>Earn small daily rewards by completing simple surveys. Consistency is key — no risk, no hype.</p>
-        <a href="online/earn-with-octopus-surveys.html">Read guide →</a>
-      </div>
-      <div class="card">
-        <h3>Offline — Street Stall</h3>
-        <p>Low-cost offline income: start a weekend stall, test demand, and scale gradually.</p>
-        <a href="offline/start-a-street-stall.html">Read guide →</a>
+<div class="container">
+  <section class="hero">
+    <div>
+      <span class="badge">
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h10M4 17h7" stroke="#bcd0f7"/></svg>
+        Simple Guides · No Fluff
+      </span>
+      <h1 class="title">BuildYourSide</h1>
+      <p class="lead">Straight-to-the-point guides for earning online and offline. Start small, stay safe, and grow your side income step by step.</p>
+    </div>
+    <div class="panel heroCard">
+      <div style="text-align:center">
+        <div style="color:#bcd0f7;margin-bottom:8px">Side Hustles · Online & Offline</div>
+        <h3>Earn Smarter</h3>
+        <div style="color:#9fb1d1;margin-top:6px;font-size:14px">Practical methods, beginner friendly.</div>
       </div>
     </div>
   </section>
 
-  <section style="margin-top:40px;">
-    <h2>About BuildYourSide</h2>
-    <div class="card">
-      <p><b>BuildYourSide</b> shares short, realistic, and transparent guides on earning extra income. We focus on clarity, not hype — helping you start, test, and grow side hustles the smart way.</p>
-      <p>Every guide is beginner-friendly, free to read, and based on practical experience.</p>
+  <section class="section">
+    <h2 style="margin:0 0 10px;">Pick Your Path</h2>
+    <div class="cards">
+      <div class="card">
+        <svg class="icon" style="flex:0 0 24px" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="#7aa2ff"/><path d="M8 18h8" stroke="#7aa2ff"/></svg>
+        <div>
+          <h3>Online</h3>
+          <p>Earn from home with surveys, platforms, and free AI tools.</p>
+          <a href="/online/earn-with-octopus-surveys.html">Octopus Surveys →</a>
+        </div>
+      </div>
+      <div class="card">
+        <svg class="icon" style="flex:0 0 24px" viewBox="0 0 24 24" fill="none"><path d="M4 10h16v9H4z" stroke="#ffd166"/><path d="M6 10V7h12v3" stroke="#ffd166"/></svg>
+        <div>
+          <h3>Offline</h3>
+          <p>Local stalls, weekend gigs, simple offline ideas.</p>
+          <a href="/offline/start-a-street-stall.html">Start a Street Stall →</a>
+        </div>
+      </div>
     </div>
   </section>
-</main>
 
-<footer>
-  © <span id="y"></span> BuildYourSide.com · Contact: <a href="mailto:xu456xu@gmail.com" style="color:#6ea8ff">xu456xu@gmail.com</a>
-</footer>
+  <section class="section">
+    <h2 style="margin:0 0 10px;">Latest Guides</h2>
+    <div class="list">
+      <div class="item">
+        <a href="/online/earn-with-octopus-surveys.html"><strong>How to Earn with Octopus Surveys (Easy Extra Cash)</strong></a>
+        <div class="meta">Online · 5 min read — registration, daily routine, payout tips.</div>
+      </div>
+      <div class="item">
+        <a href="/offline/start-a-street-stall.html"><strong>How to Start a Street Stall (Offline Side Hustle)</strong></a>
+        <div class="meta">Offline · 6 min read — products, permits, setup, pricing.</div>
+      </div>
+    </div>
+  </section>
 
-<script>
-  document.getElementById("y").textContent = new Date().getFullYear();
-</script>
+  <footer>
+    © <span id="y"></span> BuildYourSide.com · Contact: <a style="color:#bcd0f7" href="mailto:xu456xu@gmail.com">xu456xu@gmail.com</a>
+    · <a style="color:#bcd0f7" href="/guides/">Guides</a> · <a style="color:#bcd0f7" href="/about.html">About</a> · <a style="color:#bcd0f7" href="/contact.html">Contact</a>
+  </footer>
+</div>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
