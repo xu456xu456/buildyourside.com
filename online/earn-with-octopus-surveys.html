@@ -12,12 +12,31 @@
       background-color: #ffffff;
       color: #222;
       margin: 0;
-      padding: 40px 20px;
+      padding: 0;
       line-height: 1.8;
+    }
+    nav {
+      text-align: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     main {
       max-width: 800px;
-      margin: 0 auto;
+      margin: 40px auto;
+      padding: 0 20px;
     }
     h1 {
       font-size: 2em;
@@ -61,6 +80,14 @@
   </style>
 </head>
 <body>
+
+  <!-- 顶部导航栏 -->
+  <nav>
+    <a href="/">Home</a>
+    <a href="/guides/">Guides</a>
+    <a href="/about.html">About</a>
+  </nav>
+
   <main>
     <h1>Earn with Octopus Group Surveys</h1>
 
@@ -116,5 +143,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
